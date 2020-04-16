@@ -3,6 +3,7 @@ from . import views
 
 # https://docs.djangoproject.com/es/3.0/intro/tutorial03/
 
+app_name = 'polls'
 urlpatterns = [
     path('', views.index, name='index'),
     # path('lahora/', views.lahora, name='lahora'),
