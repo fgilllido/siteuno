@@ -15,6 +15,10 @@ class Question(models.Model):
     def es_reciente(self):
         now = timezone.now()
         return now - datetime.timedelta(days=1) <= self.pub_date <= now
+    
+    es_reciente.admin_order_field = "pub_date"
+    es_reciente.boolean = True
+    es_reciente.short_description = "Publicado Recientemente"
 
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
