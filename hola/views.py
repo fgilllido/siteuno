@@ -10,6 +10,6 @@ def index(request):
 def lahora(request):
 
     dt = datetime.datetime.now()
+    
     context = {"dt": dt}
-
     return render(request, 'vhora.html', context)
